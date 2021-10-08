@@ -14,15 +14,26 @@ Raspberry Pi powered system, which uses image recognition to identify and assist
 
 Which problems does your idea solve? How common or frequent is this problem? What is your personal motivation? Why is this topic important or interesting?
 
-This is how you make a list, if you need one:
-* hands are often literally and figuratively full when going out. This way there's not so much need to reach for phone. 
-* If keys are left home, door can be still opened with own face
-* 
+Some motivations:
+* hands are often literally and figuratively full when going out. This way there's not so much need to reach for phone to check the weather or bus schedules.
+* If keys are left home, door can be still opened with own face. This would be also useful for children, since they tend to forget the keys quite often.
+* Image recognition is quite fun application and this would be good way to get continous testing for it and figure out what other functions could be handy.
 
 
 ## How is it used?
 
 Describe the process of using the solution. In what kind situations is the solution needed (environment, time, etc.)? Who are the users, what kinds of needs should be taken into account?
+
+The system would basically be in use all the time, although some functions could be dropped by schedule.  
+Always on:
+* door opening by image
+
+Scheduled  
+* speech response preferably not at night
+
+To be consireded:
+* What about greeting when there's lots of traffic. Would it be enough to put some timeout for the next info about schedules and weather.
+* How to distinguish if person is just going to look outside, instead of leaving? Integration to calendar?
 
 Images will make your README look nice!
 Once you upload an image to your repository, you can link link to it like this (replace the URL with file path, if you've uploaded an image to Github.)
@@ -31,23 +42,6 @@ Once you upload an image to your repository, you can link link to it like this (
 If you need to resize images, you have to use an HTML tag, like this:
 <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Sleeping_cat_on_her_back.jpg" width="300">
 
-This is how you create code examples:
-```
-def main():
-   countries = ['Denmark', 'Finland', 'Iceland', 'Norway', 'Sweden']
-   pop = [5615000, 5439000, 324000, 5080000, 9609000]   # not actually needed in this exercise...
-   fishers = [1891, 2652, 3800, 11611, 1757]
-
-   totPop = sum(pop)
-   totFish = sum(fishers)
-
-   # write your solution here
-
-   for i in range(len(countries)):
-      print("%s %.2f%%" % (countries[i], 100.0))    # current just prints 100%
-
-main()
-```
 
 
 ## Data sources and AI methods
@@ -55,22 +49,15 @@ main()
 Basic image recognition from pretrained YOLO CNN. 
 Facial recognition needs it's own training, which again needs images of family members and other persons of interest.
 
-Where does your data come from? Do you collect it yourself or do you use data collected by someone else?
-If you need to use links, here's an example:
-[Twitter API](https://developer.twitter.com/en/docs)
-
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
+Weather data from various weather API's
+Bus schedules and estimated arrival times from HSL's API
 
 ## Challenges
 
-Biggest challenges are privacy and security. For privacy, camera shouldn't store images, unless permitted. Door opening should rather have false negatives than false positives for security reasons. How to prevent using picture of a person to get in? 
+Biggest challenges are privacy and security. For privacy, camera shouldn't store images, unless permitted. Door opening should rather have false negatives than false positives for security reasons. How to prevent using picture of a person to get in?
 * light environment
 * mechanical components
 
-What does your project _not_ solve? Which limitations and ethical considerations should be taken into account when deploying a solution like this?
 
 ## What next?
 
